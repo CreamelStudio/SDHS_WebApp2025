@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.main-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title h1{
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(57, 149, 255);
+    margin-bottom: 10px;
+}
+
+.main-title p{
+    font-size: 15px;
+    color: #7e7e7e;
+}
+
+/* ✅ 게시글 늘어날수록 section도 자동 확장 */
+section{
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+}
+
+.section-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    width: 100%;
+
+    min-height: 100vh;
+    height: auto;
+
+    padding: 150px 0 140px 0; /* 상단 여백 + footer 안겹치게 */
+}
+
+/* ✅ 북마크 목록 = 커뮤니티 게시글 컨테이너 */
+.student-worry-con{
+    width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    justify-content: flex-start;  /* ✅ 무조건 왼쪽부터 */
+    align-items: flex-start;
+}
+
+/* ✅ 카드(커뮤니티 student 카드 스타일 그대로) */
+.student{
+    width: 290px;
+    height: 210px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 5px 10px #7a91a586;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.student-box{
+    width: 240px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 상단 이름/버튼 */
+.name{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* ✅ 액션 컨테이너 (북마크/신고) */
+.post-actions{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ✅ 북마크 버튼 (이미지) */
+.bookmark-btn{
+    width: 28px;
+    height: 28px;
+    border: 0;
+    background: #f3f6fb;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s;
+}
+
+.bookmark-btn:hover{
+    background: #e6eef9;
+    transform: scale(1.05);
+}
+
+.bookmark-btn.active{
+    background: #d6e6ff;
+}
+
+.bookmark-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-1px);
+}
+
+.bookmark-icon img{
+    width: 14px;
+    height: 14px;
+    opacity: 0.8;
+}
+
+/* ✅ 신고 버튼 (이미지) */
+.report-btn{
+    width: 28px;
+    height: 28px;
+    border: 0;
+    border-radius: 50%;
+    background: #ffe9e9;
+    cursor: pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.2s;
+}
+
+.report-btn:hover{
+    background:#ffd7d7;
+    transform: scale(1.05);
+}
+
+.report-btn img{
+    width: 13px;
+    height: 12px;
+    opacity: 0.8;
+}
+
+/* 라인 */
+.line{
+    display: flex;
+    justify-content: center;
+}
+
+.line p{
+    border-bottom: 1px solid #cecece;
+    width: 250px;
+    padding: 5px;
+}
+
+/* 본문 */
+.worry{
+    padding: 5px 0 0 3px;
+    width: 230px;
+    height: 105px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    word-break: keep-all;
+    font-size: 14.5px;
+    line-height: 1.45;
+}
+
+/* 커뮤니티에서 보기 버튼 영역 */
+.go-community{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 버튼 디자인 = 커뮤니티 reply 버튼 톤 */
+.go-btn{
+    width: 120px;
+    height: 32px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(82, 163, 255);
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.go-btn:hover{
+    background-color: rgb(46, 144, 255);
+}
+
+/* ✅ 빈 상태 안내 */
+.empty-box{
+    width: 100%;
+    min-height: 260px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#6b7a90;
+    font-size:16px;
+}

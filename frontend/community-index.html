@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community</title>
+  <link rel="stylesheet" href="./css/community.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+</head>
+
+<body>
+  <div class="body-con">
+    <!-- ===== Header ===== -->
+    <header>
+      <div class="header-box">
+        <div class="main-logo">
+          <a href="./main-index.html"><img src="./images/메인로고!!.png" alt=""></a>
+        </div>
+
+        <nav>
+          <ul>
+            <a href="./main-index.html"><li>홈</li></a>
+            <a href="#"><li style="color: rgb(82, 163, 255);">커뮤니티</li></a>
+            <a href="./test.html"><li>선생님</li></a>
+            <a href="./career-test.html"><li>고민검사</li></a>
+            <a href="./pet-index.html"><li>펫</li></a>
+          </ul>
+        </nav>
+
+        <div class="sub-nav">
+          <div class="bookmark">
+            <a href="./bookmark.html">
+              <img src="./images/free-icon-bookmark-6941686.png" alt="">
+            </a>
+          </div>
+          <div id="user">
+            <img src="./images/free-icon-user-3686930.png" alt="">
+            <div id="userName"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== User Dropdown ===== -->
+    <div class="user-info hidden">
+      <div class="info-box">
+        <div class="info">
+          <div class="mail">sdh250102@sdh.hs.kr</div>
+          <div class="logout-but"><button>로그아웃</button></div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <!-- ===== Real Logout Modal ===== -->
+      <div class="real-logout hidden">
+        <div class="logout-box">
+          <p>정말 로그아웃을 하시겠습니까?</p>
+          <div class="yes-no-box">
+            <button id="no">취소</button>
+            <button id="yes">확인</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-box">
+        <div class="main-img">
+          <img src="./images/메인로고!!.png" alt="">
+        </div>
+
+        <!-- 검색 -->
+        <div class="search-con">
+          <div class="search-box">
+            <input type="text" placeholder="당신의 고민을 적어보세요">
+            <div class="seimg">
+              <img src="./images/검색 아이콘.png" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- 게시글 렌더링 컨테이너 -->
+        <div class="student-worry-con" id="post-container"></div>
+
+        <!-- 글쓰기 버튼 -->
+        <div class="write-but">
+          <button id="open-write-modal" type="button">고민 작성하기</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 글쓰기 모달 ===== -->
+    <div class="post-modal" id="write-modal">
+      <div class="modal-content">
+        <h2>고민 작성하기</h2>
+        <textarea id="post-content" placeholder="당신의 고민을 여기에 적어보세요"></textarea>
+        <div class="modal-buttons">
+          <button class="cancel" id="close-write-modal" type="button">취소</button>
+          <button class="post" id="submit-post" type="button">등록</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+      <div class="footer-box">
+        <div class="black-logo"><img src="./images/메인로고 블랙.png" alt=""></div>
+        <div class="footer-text">
+          <ul>
+            <li>회사명 : 쿠키 주식회사 | 대표이사 : 김채린 ㅣ 주소 : 인천광역시 당하동 서곶로 818 116동 804호</li>
+            <li>고객서비스센터 : 010-3536-2957 (평일 09:00 ~ 11:30 / 13:00 ~ 18:00, 주말, 공휴일 휴무)</li>
+            <li>제휴문의 : sdh240212@sdh.hs.kr</li>
+          </ul>
+          <div class="copyright">Copyright © 2025 Digi Talk. All Rights Reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ================= Templates ================= -->
+
+  <!-- 게시글 카드 -->
+  <template id="post-template">
+    <div class="student">
+      <div class="student-box">
+        <div class="name">
+          <span class="post-author"></span>
+
+          <div class="post-actions">
+            <button class="bookmark-btn" type="button" title="북마크">
+              <span class="bookmark-icon">
+                <img src="./images/free-icon-bookmark-6941686.png" alt="">
+              </span>
+            </button>
+
+            <button class="report-btn" type="button" title="신고">
+              <img src="./images/신고 이거임.png" alt="">
+            </button>
+
+            <p class="remove" style="display:none;">✕</p>
+          </div>
+        </div>
+
+        <div class="line"><p></p></div>
+        <div class="worry post-text"></div>
+
+        <div class="chat-but">
+          <button class="reply-open-btn" type="button">답글</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- 답글 모달 -->
+  <template id="reply-section-template">
+    <div class="user-text-con">
+      <div class="text-box">
+        <div class="T-box">
+          <div class="name-text">
+            <span class="post-author-full"></span>
+            <p class="T-remove">✕</p>
+          </div>
+
+          <div class="text-line"></div>
+          <div class="worry-text post-text-full"></div>
+
+          <div class="up-text">
+            <div class="up-box reply-list"></div>
+          </div>
+
+          <div class="up">
+            <input type="text" class="reply-input" placeholder="답글달기">
+            <button class="reply-submit-btn" type="button">전송</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- 답글 한 줄 -->
+  <template id="reply-item-template">
+    <div class="T-user">
+      <div class="T-name">
+        <img src="./images/free-icon-user-3686930.png" alt="">
+        <span class="reply-author"></span>
+      </div>
+      <div class="T-text reply-text"></div>
+    </div>
+  </template>
+
+  <!-- 신고 모달 -->
+  <template id="report-modal-template">
+    <div class="report-modal-backdrop">
+      <div class="report-modal">
+        <h3>게시글 신고</h3>
+
+        <label class="report-row"><input type="radio" name="report-reason" value="욕설/비방"> 욕설/비방</label>
+        <label class="report-row"><input type="radio" name="report-reason" value="음란/선정"> 음란/선정</label>
+        <label class="report-row"><input type="radio" name="report-reason" value="광고/도배"> 광고/도배</label>
+        <label class="report-row"><input type="radio" name="report-reason" value="개인정보 노출"> 개인정보 노출</label>
+        <label class="report-row"><input type="radio" name="report-reason" value="기타"> 기타</label>
+
+        <textarea class="report-detail" placeholder="추가 설명(선택)"></textarea>
+
+        <div class="report-buttons">
+          <button class="report-cancel" type="button">취소</button>
+          <button class="report-submit" type="button">신고하기</button>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- scripts -->
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script src="./script/userName.js" defer></script>
+  <script src="./script/community.js" defer></script>
+</body>
+
+</html>

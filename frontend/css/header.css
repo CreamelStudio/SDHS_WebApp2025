@@ -1,0 +1,295 @@
+/* =========================
+   RESET / BASIC
+========================= */
+*{
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  
+  html{
+    scrollbar-width: none;
+  }
+  
+  /* =========================
+     HEADER
+  ========================= */
+  header{
+    width: 100%;
+    border-bottom: 1.5px solid #d1d1d1;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    position: relative; /* 드롭다운 absolute 기준 */
+    z-index: 9999;
+  }
+  
+  .header-box{
+    width: 1300px;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* logo */
+  .main-logo{
+    width: 230px;
+  }
+  
+  .main-logo a img{
+    width: 85px;
+    display: block;
+  }
+  
+  /* nav */
+  nav{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav > ul{
+    display: flex;
+    gap: 80px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+  nav > ul > a{
+    display: block;
+  }
+  
+  nav > ul > a > li{
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  /* 오른쪽 상단 */
+  .sub-nav{
+    width: 230px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* bookmark icon box */
+  .bookmark{
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    border: 1px solid rgb(165, 197, 237);
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .bookmark a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bookmark a img{
+    width: 23px;
+    display: block;
+    transition: .3s;
+  }
+  
+  .bookmark:hover a img{
+    opacity: 0.8;
+  }
+  
+  /* user */
+  #user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  #user > img{
+    width: 30px;
+    height: 30px;
+    transition: .2s;
+  }
+  
+  #user > img:hover{
+    opacity: 0.8;
+  }
+  
+  /* =========================
+     USER DROPDOWN
+     userName.js가 hidden 토글함
+  ========================= */
+  .user-info{
+    position: absolute;
+    top: 85px;
+    right: 20px;
+    display: block;
+    z-index: 100;
+  }
+  
+  .user-info.hidden{
+    display: none;
+  }
+  
+  .info-box{
+    width: 230px;
+    height: 110px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 5px #cacaca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info{
+    width: 200px;
+    height: 80px;
+  }
+  
+  .mail{
+    color: #7e7e7e;
+    font-weight: 400;
+  }
+  
+  /* logout button */
+  .logout-but{
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .logout-but > button{
+    width: 200px;
+    height: 35px;
+    border: 0;
+    background-color: rgb(99, 172, 255);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: .3s;
+    cursor: pointer;
+  }
+  
+  .logout-but > button:hover{
+    background-color: rgb(86, 158, 241);
+  }
+  
+  /* =========================
+     REAL LOGOUT MODAL
+  ========================= */
+  .real-logout{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  }
+  
+  .real-logout.hidden{
+    display: none;
+  }
+  
+  .logout-box{
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .logout-box p{
+    font-size: 20px;
+    padding: 5px;
+  }
+  
+  .logout-box button{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #yes{
+    background-color: #4a90e2;
+    color: #fff;
+  }
+  
+  #no{
+    background-color: #e0e0e0;
+  }
+  
+  .yes-no-box{
+    display: flex;
+    gap: 30px;
+  }
+  
+  /* =========================
+     FOOTER
+  ========================= */
+  footer{
+    width: 100%;
+  }
+  
+  .footer-box{
+    width: 100%;
+    height: 240px;
+    background-color: #ACBECA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #333;
+  }
+  
+  .footer-box .black-logo{
+    padding: 25px 0 10px 0;
+  }
+  
+  .footer-box .black-logo img{
+    width: 90px;
+  }
+  
+  .footer-text{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .footer-text ul{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .footer-text .copyright{
+    font-size: 13px;
+    color: #444;
+  }
+  

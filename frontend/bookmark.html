@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookmarks</title>
+  <link rel="stylesheet" href="./css/bookmark.css" />
+  <link rel="stylesheet" href="./css/header.css" />
+</head>
+
+<body>
+  <div class="body-con">
+    <header>
+      <div class="header-box">
+          <div class="main-logo">
+              <a href="#"><img src="./images/메인로고!!.png" alt=""></a>
+          </div>
+
+          <nav>
+              <ul>
+                  <a href="./main-index.html">
+                      <li>홈</li>
+                  </a>
+                  <a href="./community-index.html">
+                      <li style="color: rgb(82, 163, 255);">커뮤니티</li>
+                  </a>
+                  <a href="./test.html">
+                      <li>선생님</li>
+                  </a>
+                  <a href="./career-test.html">
+                    <li>고민검사</li>
+                </a>
+                  <a href="./pet-index.html">
+                      <li>펫</li>
+                  </a>
+                  
+              </ul>
+          </nav>
+
+          <div class="sub-nav">
+              <div class="bookmark"><a href="./bookmark.html"><img src="./images/free-icon-bookmark-6941686.png"
+                          alt=""></a></div>
+              <div id="user"><img src="./images/free-icon-user-3686930.png" alt="">
+                  <div id="userName"></div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <div class="user-info hidden">
+    <div class="info-box">
+        <div class="info">
+    <div class="mail">sdh250102@sdh.hs.kr</div>
+
+    <div class="logout-but"><button>로그아웃</button></div>
+</div>
+</div>
+</div>
+
+    <section>
+
+      <div class="real-logout hidden">
+        <div class="logout-box">
+            <p>정말 로그아웃을 하시겠습니까?</p>
+
+            <div class="yes-no-box">
+            <button id="no">취소</button>
+            <button id="yes">확인</button>
+            </div>
+        </div>
+    </div> 
+    
+      <div class="section-box">
+        <div class="main-title">
+          <h1>내 북마크</h1>
+          <p>저장한 게시글만 모아볼 수 있어요.</p>
+        </div>
+
+        <div class="student-worry-con" id="bookmark-container">
+          <!-- Bookmarked posts will render here -->
+        </div>
+
+        <div class="empty-box" id="empty-box" style="display:none;">
+          북마크한 게시글이 아직 없어요 😅
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-box">
+        <div class="black-logo"><img src="./images/메인로고 블랙.png" alt=""></div>
+        <div class="footer-text">
+          <ul>
+            <li>회사명 : 쿠키 주식회사 | 대표이사 : 김채린 ㅣ 주소 : 인천광역시 당하동 서곶로 818 116동 804호</li>
+            <li>고객서비스센터 : 010-3536-2957 (평일 09:00 ~ 11:30 / 13:00 ~ 18:00, 주말, 공휴일 휴무)</li>
+            <li>제휴문의 : sdh240212@sdh.hs.kr</li>
+          </ul>
+          <div class="copyright">Copyright © 2025 Digi Talk. All Rights Reserved.</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ✅ 북마크 카드 템플릿 (커뮤니티 액션 버튼 그대로) -->
+  <template id="bookmark-template">
+    <div class="student">
+      <div class="student-box">
+        <div class="name">
+          <span class="post-author"></span>
+
+          <div class="post-actions">
+            <!-- ✅ 북마크 해제 (이미지 아이콘) -->
+            <button class="bookmark-btn active" type="button" title="북마크 해제">
+              <span class="bookmark-icon">
+                <img src="./images/free-icon-bookmark-6941686.png" alt="">
+              </span>
+            </button>
+
+            <!-- ✅ 신고 -->
+            <button class="report-btn" type="button" title="신고">
+              <img src="./images/신고 이거임.png" alt="">
+            </button>
+          </div>
+        </div>
+
+        <div class="line"><p></p></div>
+        <div class="worry post-text"></div>
+
+        <div class="go-community">
+          <a class="go-btn" href="./community.html">커뮤니티에서 보기</a>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="./script/userName.js" defer></script>
+  <script src="./script/bookmark.js" defer></script>
+</body>
+</html>

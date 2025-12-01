@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>career test</title>
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/career-test.css">
+</head>
+
+<body>
+  <div class="body-con">
+
+    <header>
+        <div class="header-box">
+            <div class="main-logo">
+                <a href="#"><img src="./images/메인로고!!.png" alt=""></a>
+            </div>
+
+            <nav>
+                <ul>
+                    <a href="./main-index.html">
+                        <li>홈</li>
+                    </a>
+                    <a href="./community-index.html">
+                        <li>커뮤니티</li>
+                    </a>
+                    <a href="./test.html">
+                        <li>선생님</li>
+                    </a>
+                    <a href="#">
+                        <li style="color: rgb(82, 163, 255);">고민검사</li>
+                    </a>
+                    <a href="./pet-index.html">
+                        <li>펫</li>
+                    </a>
+                    
+                </ul>
+            </nav>
+
+            <div class="sub-nav">
+                <div class="bookmark"><a href="./bookmark.html"><img src="./images/free-icon-bookmark-6941686.png"
+                            alt=""></a></div>
+                <div id="user"><img src="./images/free-icon-user-3686930.png" alt="">
+                    <div id="userName"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="user-info hidden">
+        <div class="info-box">
+            <div class="info">
+                <div class="mail">sdh250102@sdh.hs.kr</div>
+
+                <div class="logout-but"><button>로그아웃</button></div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+
+        <div class="real-logout hidden">
+            <div class="logout-box">
+                <p>정말 로그아웃을 하시겠습니까?</p>
+
+                <div class="yes-no-box">
+                    <button id="no">취소</button>
+                    <button id="yes">확인</button>
+                </div>
+            </div>
+        </div>
+        
+      <div class="section-box">
+
+        <div id="screenList" class="screen active">
+          <div class="main-text-box">
+            <div class="main-text">요즘 나, 어떤 고민에 서 있는 걸까?</div>
+            <p>Digi톡에서 테스트를 통해 당신의 고민을 해결해보세요.</p>
+          </div>
+
+          <div class="test-con" id="testCon">
+          </div>
+        </div>
+
+
+        <div id="screenQuiz" class="screen">
+
+          <div class="quiz-top">
+            <button id="backBtn" class="back-btn"> ＜ 돌아가기</button>
+
+            <div class="quiz-head">
+              <div class="quiz-title" id="quizTitle">테스트 제목</div>
+              <p id="quizDesc">테스트 설명</p>
+            </div>
+
+            <div class="quiz-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+              </div>
+              <div class="progress-text" id="progressText">1 / 5</div>
+            </div>
+          </div>
+
+          <div class="quiz-box">
+            <div class="q-num" id="qNum">Q1</div>
+            <div class="q-text" id="qText">질문 들어감</div>
+
+            <div class="answer-con" id="answerCon">
+            </div>
+          </div>
+
+          <div class="quiz-nav">
+            <button id="prevBtn" class="quiz-ghost">이전</button>
+            <button id="nextBtn" class="quiz-main">다음</button>
+          </div>
+        </div>
+
+
+        <div id="screenResult" class="screen">
+
+          <div class="result-box">
+            <div class="result-head">
+              <div class="result-icon" id="resultIcon">🎓</div>
+              <div class="result-title" id="resultTitle">결과 제목</div>
+              <p id="resultSummary">요약</p>
+            </div>
+
+            <div class="result-tag-box" id="resultTags"></div>
+
+            <div class="result-detail" id="resultDetail"></div>
+
+            <div class="result-buttons">
+              <button id="retryBtn" class="quiz-ghost">다시하기</button>
+              <button id="toListBtn" class="quiz-main">다른 테스트</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-box">
+        <div class="black-logo"><img src="./images/메인로고 블랙.png" alt=""></div>
+        <div class="footer-text">
+          <ul>
+            <li>회사명 : 쿠키 주식회사 | 대표이사 : 김채린 ㅣ 주소 : 인천광역시 당하동 서곶로 818 116동 804호</li>
+            <li>고객서비스센터 : 010-3536-2957 (평일 09:00 ~ 11:30 / 13:00 ~ 18:00, 주말, 공휴일 휴무)</li>
+            <li>제휴문의 : sdh240212@sdh.hs.kr</li>
+          </ul>
+          <div class="copyright">Copyright © 2025 Digi Talk. All Rights Reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="./script/userName.js"></script>
+  <script src="./script/career-test.js"></script>
+</body>
+</html>

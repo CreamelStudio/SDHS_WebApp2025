@@ -1,0 +1,5 @@
+node_modules
+community.db
+const GEMINI_API_KEY = "AIzaSyDRoGkZSv7Jn_3084CWeDQbflX54CAiWI8";
+const API_URL = "http://localhost:8000/askToChanyong";
+.env

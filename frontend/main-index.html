@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/header.css">
+</head>
+
+<body>
+    <div class="body-con">
+        <header>
+            <div class="header-box">
+                <div class="main-logo">
+                    <a href="#"><img src="./images/메인로고!!.png" alt=""></a>
+                </div>
+
+                <nav>
+                    <ul>
+                        <a href="#">
+                            <li style="color: rgb(82, 163, 255);">홈</li>
+                        </a>
+                        <a href="./community-index.html">
+                            <li>커뮤니티</li>
+                        </a>
+                        <a href="./test.html">
+                            <li>선생님</li>
+                        </a>
+                        <a href="./career-test.html">
+                            <li>고민검사</li>
+                        </a>
+                        <a href="./pet-index.html">
+                            <li>펫</li>
+                        </a>
+                    </ul>
+                </nav>
+
+                <div class="sub-nav">
+                    <div class="bookmark">
+                        <a href="./bookmark.html">
+                            <img src="./images/free-icon-bookmark-6941686.png" alt="">
+                        </a>
+                    </div>
+                    <div id="user">
+                        <img src="./images/free-icon-user-3686930.png" alt="">
+                        <div id="userName"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="user-info hidden">
+            <div class="info-box">
+                <div class="info">
+                    <div class="mail">sdh250102@sdh.hs.kr</div>
+                    <div class="logout-but"><button>로그아웃</button></div>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="real-logout hidden">
+                <div class="logout-box">
+                    <p>정말 로그아웃을 하시겠습니까?</p>
+                    <div class="yes-no-box">
+                        <button id="no">취소</button>
+                        <button id="yes">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="first-bnr-con">
+                <div class="first-bnr-box">
+                    <div class="main-text-box">
+                        <div class="main-text reveal-text">
+                            학교 고민, <br>혼자 생각하지 마세요
+                        </div>
+                        <p class="reveal-text reveal-delay-1">
+                            학업, 취업, 연애, 진로고민까지 디지텍이 모두 들어드립니다.
+                        </p>
+                    </div>
+
+                    <div class="worry-post-but">
+                        <a href="./community-index.html"><button>고민 등록하기</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="second-bnr-con">
+                <div class="second-bnr-box">
+                    <div class="second-text reveal-text">다양한 학생들의 고민</div>
+
+                    <div class="post-slider-section">
+                        <div class="post-slider">
+                            <button class="slider-btn prev" aria-label="prev">＜</button>
+
+                            <div class="slider-window">
+                                <div class="slider-track" id="sliderTrack">
+
+                                    <div class="student post-card">
+                                        <div class="student-box">
+                                            <div class="name">
+                                                <p>10102 강경연</p>
+                                            </div>
+                                            <div class="line"><p></p></div>
+                                            <div class="worry">
+                                                요즘 뭘 해도 ‘이게 맞나?’ 싶은 마음이 자꾸 들어. 열심히는 하고 있는데 방향이 맞는지 모르겠어.
+                                                남들은 다 자기 길 잘 가는 것 같은데 나만 제자리인 느낌. 조급해지는데 또 뭘 어떻게 바꿔야 할지도 모르겠어.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="student post-card">
+                                        <div class="student-box">
+                                            <div class="name">
+                                                <p>10111 김채린</p>
+                                            </div>
+                                            <div class="line"><p></p></div>
+                                            <div class="worry">
+                                                사람들이랑 있을 땐 괜찮은데 혼자 있으면 갑자기 공허해져. 내가 진짜 원하는 게 뭔지, 좋아하는 게
+                                                뭔지도 잘 모르겠고. 그냥 하루하루 버티는 것 같아. 이 상태가 오래 가면 어떡하지?
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="student post-card">
+                                        <div class="student-box">
+                                            <div class="name">
+                                                <p>20206 이현우</p>
+                                            </div>
+                                            <div class="line"><p></p></div>
+                                            <div class="worry">
+                                                가까운 사람한테 서운한 게 쌓였는데 말하면 관계가 어색해질까 봐 못 하겠어. 안 말하면 내가 계속
+                                                힘들고, 말하면 상대가 상처받을까 걱정돼. 이런 마음을 어디에 어떻게 꺼내야 할지 모르겠어.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="student post-card">
+                                        <div class="student-box">
+                                            <div class="name">
+                                                <p>10205 김마뽀</p>
+                                            </div>
+                                            <div class="line"><p></p></div>
+                                            <div class="worry">
+                                                해야 할 일은 많은데 손에 안 잡혀. 미루고 나서 후회하고, 후회하니까 또 더 하기 싫어지고… 이
+                                                반복이 너무 싫다. 의욕이 없는 건지 지친 건지 나도 헷갈려. 나 좀 다시 제대로 살고 싶은데.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="student post-card">
+                                        <div class="student-box">
+                                            <div class="name">
+                                                <p>10416 박시후</p>
+                                            </div>
+                                            <div class="line"><p></p></div>
+                                            <div class="worry">
+                                                미래 생각하면 겁부터 난다. 지금 선택이 나중에 얼마나 큰 차이를 만들까 싶어서 더 못 고르겠어.
+                                                실수하고 싶지 않은 마음이 오히려 나를 멈춰 세우는 느낌. 나도 그냥 마음 편하게 결정하고 싶다.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <button class="slider-btn next" aria-label="next">＞</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="third-bnr-con">
+                <div class="third-bnr-box">
+                    <div class="main-text A reveal-text">당신의 고민을 해결해주는 챗봇</div>
+
+                    <div class="chat-bot-text">
+                        <div class="bot-text-box">
+                            <img src="./images/Group 20.png" alt="">
+                            <p>오늘 하루, 학교 생활은 어땠나요?</p>
+                        </div>
+
+                        <div class="bot-img">
+                            <img src="./images/진짜햄.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="third-text reveal-text reveal-delay-1">
+                        <strong>Digi톡</strong>
+                        은 멘탈케어 서비스에요 <br>
+                        수업시간은 편안한지 무엇이 즐거운지 궁금해요.
+                    </div>
+                </div>
+            </div>
+
+            <div class="jump-bnr-con">
+                <div class="jump-bnr-box">
+                    <div class="jump-text-box">
+                        <div class="jump-text reveal-text">나를 더욱 성장시킬 수 있는 인사이트</div>
+                        <p class="reveal-text reveal-delay-1">당신은 이 상황에서 어떻게 해결하실건가요?</p>
+                    </div>
+
+                    <div class="jump-worry-con">
+                        <div class="jump-worry-bk-box">
+                            <div class="worry-box">
+                                <img src="./images/ㅋㅋ진로.png" alt="">
+                                <p>공부가 안 잡히고 진로가 막막해요 <br> 어떻게 찾죠?</p>
+                            </div>
+                        </div>
+
+                        <div class="jump-worry-bk-box">
+                            <div class="worry-box">
+                                <img src="./images/ㅇ년앸ㅋㅋ.png" alt="">
+                                <p>좋아하는 애가 있는데 <br> 먼저 다가가도 될까요?</p>
+                            </div>
+                        </div>
+
+                        <div class="jump-worry-bk-box">
+                            <div class="worry-box">
+                                <img src="./images/친군ㄴ.png" alt="" class="B">
+                                <p>반 친구들과 친해지기 어려워요 <br> 어떻게 하면 좋을까요?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fifth-bnr-con">
+                <div class="fifth-bnr-box">
+                    <div class="fifth-text-box">
+                        <p class="reveal-text">Enjoy Your School</p>
+                        <div id="randomTexts" class="reveal-text reveal-delay-1"></div>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer-box">
+                    <div class="black-logo"><img src="./images/메인로고 블랙.png" alt=""></div>
+
+                    <div class="footer-text">
+                        <ul>
+                            <li>회사명 : 쿠키 주식회사 | 대표이사 : 김채린 ㅣ 주소 : 인천광역시 당하동 서곶로 818 116동 804호</li>
+                            <li>고객서비스센터 : 010-3536-2957 (평일 09:00 ~ 11:30 / 13:00 ~ 18:00, 주말, 공휴일 휴무)</li>
+                            <li>제휴문의 : sdh240212@sdh.hs.kr</li>
+                        </ul>
+
+                        <div class="copyright">Copyright © 2025 Digi Talk. All Rights Reserved.</div>
+                    </div>
+                </div>
+            </footer>
+
+        </section>
+    </div>
+
+    <script src="./script/slide.js"></script>
+    <script src="./script/userName.js"></script>
+    <script src="./script/randomtext.js"></script>
+    <script src="./script/main.js"></script>
+
+    <script>
+        const revealTargets = document.querySelectorAll(".reveal-text");
+
+        const io = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.25,
+            rootMargin: "0px 0px -10% 0px"
+        });
+
+        revealTargets.forEach(el => io.observe(el));
+    </script>
+</body>
+</html>
